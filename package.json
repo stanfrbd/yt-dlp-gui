@@ -1,13 +1,13 @@
 {
-    "name": "electron-app",
+    "name": "yt-dlp-gui",
     "version": "1.0.0",
-    "description": "",
+    "description": "A yt-dlp wrapper as a GUI",
     "main": "main.js",
     "scripts": {
         "start": "electron ."
     },
     "keywords": [],
-    "author": "",
+    "author": "stanfrbd",
     "license": "ISC",
     "dependencies": {
         "electron": "^13.6.2"

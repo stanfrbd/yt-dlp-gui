@@ -19,8 +19,8 @@ function createWindow() {
     // Vérifiez les dépendances avant de créer la fenêtre
     checkDependencies();
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 720,
+        height: 480,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -28,6 +28,7 @@ function createWindow() {
     });
 
     win.loadFile('index.html');
+    win.setMenu(null); // Ajoutez cette ligne pour masquer le menu
 }
 
 app.whenReady().then(createWindow);
