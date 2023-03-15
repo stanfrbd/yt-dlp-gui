@@ -1,0 +1,34 @@
+# Fichier .gitignore pour un projet Electron
+
+# Ignorer les fichiers de débogage
+*.log
+
+# Ignorer les dossiers de dépendances
+node_modules/
+
+# Ignorer les fichiers de configuration des éditeurs
+.vscode/
+.idea/
+
+# Ignorer les fichiers temporaires et les fichiers de sauvegarde
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+
+# Ignorer les fichiers de build et de distribution
+dist/
+build/
+electron-packager/
+electron-builder/
+release/
+*.asar
+*.exe
+*.dmg
+*.AppImage
+*.snap
+
+# Ignorer les fichiers de cache
+*.cache
+.cache/
