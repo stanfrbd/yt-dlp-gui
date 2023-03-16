@@ -7,18 +7,17 @@ const {
 
 const { clipboard } = require('electron');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('downloadForm');
-    form.addEventListener('submit', handleSubmit);
+function pasteFromClipboard() {
+    const clipboardContent = clipboard.readText();
+    const isValidLink = clipboardContent.includes('https://');
 
-    const urlInput = document.getElementById('url');
-
-    urlInput.addEventListener('click', () => {
-        if (!urlInput.value) {
-            urlInput.value = clipboard.readText();
-        }
-    });
-});
+    if (isValidLink) {
+        const urlInput = document.getElementById('url');
+        urlInput.value = clipboardContent;
+    } else {
+        alert("Le contenu précédemment copié n'est pas un lien valide.");
+    }
+}
 
 async function selectOutputPath() {
     const result = await ipcRenderer.invoke('select-output-path');
@@ -54,9 +53,9 @@ function handleSubmit() {
     const messageContainer = document.getElementById('messageContainer');
     const downloadAnotherButton = document.getElementById('downloadAnother');
 
-    // Vérifiez si l'URL est vide
-    if (!url) {
-        alert("Veuillez entrer une URL");
+    // Vérifiez si l'URL est vide ou invalide
+    if (!url || !url.includes('https://')) {
+        alert("Veuillez entrer une URL valide");
         return;
     }
 
