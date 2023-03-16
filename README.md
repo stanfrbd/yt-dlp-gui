@@ -50,8 +50,11 @@ Les binaires seront créés dans le dossier `build` du projet.
 - Cliquez ensuite sur le bouton "soumettre" pour commencer le téléchargement. 
 - La progression du téléchargement sera affichée à l'écran.
 
-![image](https://user-images.githubusercontent.com/44167150/225568316-cd01725a-9828-4a82-a3ee-b8f42d9a1874.png)
+![image](https://user-images.githubusercontent.com/44167150/225592624-883bdefd-61c2-4807-a8bc-8185c5192b47.png)
 
+![image](https://user-images.githubusercontent.com/44167150/225592790-d34d1d80-9082-49ac-b377-21b165fb9998.png)
+
+![image](https://user-images.githubusercontent.com/44167150/225592890-ae1856bf-b36f-46a1-af31-0667459a19f7.png)
 
 # Licence
 Ce projet est sous licence MIT. 
