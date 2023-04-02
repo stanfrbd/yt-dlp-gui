@@ -71,7 +71,7 @@ function handleSubmit() {
 
     progressLabel.style.display = 'inline'; // Afficher le label "Progression"
 
-    const command = `yt-dlp -f "bestvideo[height=1080][ext=mp4]+bestaudio[ext=m4a]/best[height=1080][ext=mp4]" --merge-output-format mp4 -o "${outputPath}/%(title)s.%(ext)s" ${extraOptions} ${url}`;
+    const command = `yt-dlp -f "bestvideo[height<=1080]+bestaudio" --merge-output-format mp4 --audio-quality 128K --audio-format aac -o "${outputPath}/%(title)s.%(ext)s" ${extraOptions} ${url}`;
 
     const process = exec(command);
 
